@@ -3,17 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Konversi Suhu</title>
+    <link rel="stylesheet" href="css\styles.css">
 
-    <!--Link CSS-->
-    <link rel="stylesheet" href="css\styles.css"
+
 </head>
 <body>
     <header>
+        <div class="header-grid">
+            <div class="wrapper">
+                <h1 style="justify-content:center">Konversi Suhu</h1>
+            </div>
+        </div>
     </header>
+    <main>
+        <div class="main-container wrapper"> 
+            <section id="description">
+                <div class="errorMsg" id="errorMsg" style="visibility: hidden;"></div>
+                <p>Masukkan suhu derajat Celsius (&#176;C) ke kotak dibawah ini, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&#176;F)</p>
+            </section>
+            <section id="konversi">
+                <div>
+                    <h4 data-temp-input="celsius" >Celsius (&#176;C)</h4>
+                    <input type="number" name="tempInput" id="tempInput" placeholder="masukkan temperatur">
+                </div>
+                <div>
+                    <h4 data-temp-result="fahrenheit">Fahrenheit (&#176;F)</h4>
+                    <input type="text" name="tempResult" id="tempResult" disabled>
+                </div>
+                <div class="btn">
+                        <button onclick="onConvert()", class="bg-purple">Konversi</button>
+                        <button onclick="onReset()", class="bg-blue">Reset</button>
+                        <button onclick="onReverse()", style="background-color: cyan;">Reverse</button>
+                </div>
+                <div>
+                    <h3>Cara Kalkulasi</h3>
+                    <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="5" disabled></textarea>
+                </div>
+            </section>
+            <section id="explanation">
+                
+                <hr>
 
-    <main></main>
+                <article>
+                    <section>
+                        <p>Suhu <span class="remark">S</span> dalam derajat Fahrenheit (°F) sama dengan suhu <span class="remark">S</span> dalam derajat Celsius (°C) kali <strong>9/5</strong> tambah <strong>32</strong>.</p>
+                        <p><span class="remark">S</span><sub>(&deg;F)</sub> = (<span class="remark">S</span><sub>(&deg;C)</sub> × <sup>9</sup>&frasl;<sub>5</sub>) + 32</p>
+                        <p>atau</p>
+                        <p><span class="remark">S</span><sub>(&deg;F)</sub> = (<span class="remark">S</span><sub>(&deg;C)</sub> × 1.8) + 32</p>
+                    </section>                
+                </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper footer-container">made by Fanysia @2025</div>
+    </footer>
 
-    <footer></footer>
+    <script src="js\script.js"></script>
 </body>
 </html>
